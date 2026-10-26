@@ -4,6 +4,8 @@
   --noir: #14121A;
   --fond: #FFF8E7;
   --jaune: #FFD400;
+  --vert: #1F7A3A;
+  --gris: #4A4655;
   --police-texte: "Barlow", sans-serif;
   --police-titre: "Bangers", sans-serif;
   --police-logo: "Anton", sans-serif;
@@ -135,6 +137,64 @@ footer {
   background-color: var(--rouge-fonce);
 }
 
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.progression {
+  text-align: center;
+  font-weight: 700;
+  color: var(--gris);
+}
+
+.enonce {
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.reponses {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.reponse {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  padding: 12px 16px;
+  background-color: white;
+  color: var(--noir);
+  border: 3px solid var(--noir);
+  font-family: var(--police-texte);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.reponse:hover {
+  background-color: var(--jaune);
+}
+
+.retour {
+  padding: 12px 14px;
+  border: 3px solid var(--noir);
+  font-weight: 700;
+  color: var(--noir);
+}
+
+.retour.juste {
+  background-color: var(--vert);
+}
+
+.retour.faux {
+  background-color: var(--rouge);
+}
+
 @media (min-width: 768px) {
   .ecran {
     min-height: 560px;
@@ -157,6 +217,14 @@ footer {
   }
 
   .page1 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .enonce {
+    font-size: 1.6rem;
+  }
+
+  .reponses {
     grid-template-columns: 1fr 1fr;
   }
 }
