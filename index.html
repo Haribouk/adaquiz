@@ -6,38 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Marvel</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-     
-
-     
-
-  <!-- ═══════════════════════════════════════
+     <!-- ═══════════════════════════════════════
        ÉCRAN 1 — ACCUEIL
        Affiché au départ. Caché quand on clique sur "Commencer".
   ════════════════════════════════════════ -->
   <section id="ecran-accueil" class="ecran">
-
      <header>
-
-          <h1>Quizz MARVEL</h1>
-
+          <h1>QUIZ <span class="logo">MARVEL</span></h1>
      </header>
 
-
      <main>
-
-          <H2></H2>
-          <img src="" alt="">
-          <p></p>
-
+          <section class="page1">
+               <img src="avengers.jpg" alt="Illustration des Avengers">
+               <article class="texte_accueil">
+                    <h2>Prêt pour ce quiz ?</h2>
+                    <p>Teste tes connaissances sur l'univers Marvel : héros, méchants et films.</p>
+                    <p>10 questions, une seule bonne réponse par question. Tu verras ton score à la fin.</p>
+               </article>
+          </section>
      </main>
 
      <footer>
-
-          <p></p>
-
+          <button type="button" class="bouton">Commencer</button>
      </footer>
 
   </section>
@@ -47,45 +41,28 @@
        Caché au départ. Affiché pendant le quiz.
   ════════════════════════════════════════ -->
   <section id="ecran-question" class="ecran cache">
-
      <header>
-
-          <h1>Quizz MARVEL</h1>
- 
+          <h1>QUIZ <span class="logo">MARVEL</span></h1>
      </header>
-
+     
      <main>
+          <article class="question">
+               <p class="progression">Question 1 / 10</p>
+               <h2 class="enonce">Dans les films Marvel, quel est le vrai nom de Hulk ?</h2>
 
-          <section>
-               <p></p>
-               <p></p>
-          </section>
+               <section class="reponses">
+                    <button type="button" class="reponse">Steve Rogers</button>
+                    <button type="button" class="reponse">Tony Stark</button>
+                    <button type="button" class="reponse juste">Bruce Banner</button>
+                    <button type="button" class="reponse">Peter Parker</button>
+               </section>
 
-          <section>
-               <article>
-                    <p></p>
-               </article>
-
-               <article>
-                    <p></p>
-               </article>
-
-               <article>
-                    <p></p>
-               </article>
-                
-               <article>
-                    <p></p>
-               </article>
-          </section>
-
+          <p class="retour juste">Bonne réponse ! Bruce Banner est bien Hulk.</p>
+          </article>
      </main>
 
-
      <footer>
-
-          <p></p>
-
+          <button type="button" class="bouton"">Suivant</button>
      </footer>
      
 
