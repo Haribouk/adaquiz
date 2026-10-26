@@ -1,8 +1,166 @@
-/* ════════════════════════════════════════════
-   ADAQUIZ — style.css
-════════════════════════════════════════════ */
+:root {
+  --rouge: #D0111A;
+  --rouge-fonce: #A80D14;
+  --noir: #14121A;
+  --fond: #FFF8E7;
+  --jaune: #FFD400;
+  --police-texte: "Barlow", sans-serif;
+  --police-titre: "Bangers", sans-serif;
+  --police-logo: "Anton", sans-serif;
+}
 
-/* La classe .cache masque un écran */
-.cache {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 1.5rem 1rem;
+  font-family: var(--police-texte);
+  color: var(--noir);
+  line-height: 1.5;
+  background-color: var(--rouge);
+}
+
+.ecran {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  min-height: calc(100vh - 3rem);
+  min-height: calc(100dvh - 3rem);
+  margin: 0 auto;
+  background-color: var(--fond);
+  border: 4px solid var(--noir);
+}
+
+header {
+  padding: 16px;
+  background-color: var(--noir);
+  border-bottom: 6px solid var(--rouge);
+}
+
+h1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--jaune);
+  font-family: var(--police-titre);
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.logo {
+  padding: 4px 10px 2px;
+  background-color: var(--rouge);
+  color: white;
+  border: 3px solid white;
+  font-family: var(--police-logo);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px 24px;
+}
+
+.page1 {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+  align-content: center;
+}
+
+.page1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 420px;
+  object-fit: cover;
+  border: 4px solid var(--noir);
+}
+
+.texte_accueil h2 {
+  margin-bottom: 12px;
+  font-family: var(--police-titre);
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--rouge);
+}
+
+.texte_accueil p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.bouton {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px 24px 10px;
+  background-color: var(--rouge);
+  color: white;
+  border: 3px solid var(--noir);
+  box-shadow: 4px 4px 0 var(--noir);
+  font-family: var(--police-titre);
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.bouton:hover {
+  background-color: var(--rouge-fonce);
+}
+
+@media (min-width: 768px) {
+  .ecran {
+    min-height: 560px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .logo {
+    font-size: 2.2rem;
+  }
+
+  main {
+    padding: 32px 40px;
+  }
+
+  footer {
+    padding: 0 40px 32px;
+  }
+
+  .page1 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ecran.cache {
   display: none;
 }
