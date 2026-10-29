@@ -92,6 +92,8 @@ const afficherQuestion = () => {
 
 const verifierReponse = (indexChoisi) => {
   // Écris ton code ici
+  const q  = questions[indexCourant]
+  
 }
 
 
@@ -117,3 +119,8 @@ const afficherResultats = () => {
 //   - btn-rejouer   → remettre indexCourant et score à 0, revenir à l'accueil
 
 // Écris ton code ici
+btnCommencer.addEventListener("click", () => {
+  afficher(ecranQuestion)
+  afficherQuestion()
+})
+
