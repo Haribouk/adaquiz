@@ -28,7 +28,11 @@ body {
   font-family: var(--police-texte);
   color: var(--noir);
   line-height: 1.5;
-  background-color: darkblue;
+ 
+  background-image: url(fondjaune.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .ecran {
