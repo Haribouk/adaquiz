@@ -10,6 +10,14 @@
 // Tu n'as pas besoin de les modifier.
 
 const btnCommencer = document.getElementById('btn-commencer')
+const ecranAccueil = document.getElementById("ecran-accueil")
+const ecranQuestion = document.getElementById("ecran-question")
+const ecranResultats = document.getElementById("ecran-resultats")
+const compteur = document.getElementById("compteur")
+const texteQuestion = document.getElementById("texte-question")
+const btnSuivant = document.getElementById("btn-suivant")
+const listeReponses = document.getElementById("liste-reponses")
+
 //... Crée autant de constantes que d'éléments HTML à récupérer
 
 
@@ -17,23 +25,8 @@ const btnCommencer = document.getElementById('btn-commencer')
 // Ces variables stockent les données en cours de partie.
 // Tu n'as pas besoin de les modifier.
 
-let questions = []   // tableau des questions chargées depuis le JSON
 let indexCourant = 0    // numéro de la question en cours (commence à 0)
 let score = 0    // nombre de bonnes réponses
-
-
-// ── Chargement du JSON ───────────────────────
-// Cette fonction est déjà écrite.
-// Elle charge le fichier questions.json et remplit l'écran d'accueil.
-
-fetch('questions.json')
-  .then(response => response.json())
-  .then(data => {
-    questions = data
-    titreQuiz.textContent = 'AdaQuiz'
-    descriptionQuiz.textContent = 'Ton quiz personnalisé'
-    nbQuestions.textContent = questions.length + ' questions'
-  })
 
 
 // ── Navigation entre les écrans ──────────────
@@ -68,6 +61,20 @@ const afficher = (ecran) => {
 
 const afficherQuestion = () => {
   // Écris ton code ici
+  const q  = questions[indexCourant]
+  compteur.textContent = `Question ${indexCourant + 1} / ${questions.length}`
+  texteQuestion.textContent = q.question
+  btnSuivant.classList.add("cache")
+  listeReponses.innerHTML = ""
+  q.reponses.forEach((reponse, index) => {
+    const btn = document.createElement("button")
+    btn.textContent = reponse
+    btn.classList.add("reponse")
+    btn.addEventListener("click", () => {
+      verifierReponse(index)
+    })
+    listeReponses.appendChild(btn)
+  })
 }
 
 
