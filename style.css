@@ -198,6 +198,25 @@ footer {
 .retour.faux {
   background-color: var(--rouge);
 }
+.page3 p{
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+}
+
+.page3 p{
+  font-size: 36px;
+  font-weight: 700;
+  border: 3px solid black;
+  display: inline-block;
+  
+}
+.page3 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
 
 @media (min-width: 768px) {
   .ecran {
