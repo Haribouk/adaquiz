@@ -33,7 +33,7 @@
      </main>
 
      <footer>
-          <button type="button" class="bouton">Commencer</button>
+          <button type="button" id="btn-commencer" class="bouton">Commencer</button>
      </footer>
 
   </section>
@@ -49,22 +49,22 @@
      
      <main>
           <article class="question">
-               <p class="progression">Question 1 / 10</p>
-               <h2 class="enonce">Dans les films Marvel, quel est le vrai nom de Hulk ?</h2>
+               <p class="progression" id="compteur" >Question 1 / 10</p>
+               <h2 class="enonce" id="texte-question">Dans les films Marvel, quel est le vrai nom de Hulk ?</h2>
 
-               <section class="reponses">
+               <section class="reponses" id="liste-reponses">
                     <button type="button" class="reponse">Steve Rogers</button>
                     <button type="button" class="reponse">Tony Stark</button>
                     <button type="button" class="reponse">Bruce Banner</button>
                     <button type="button" class="reponse">Peter Parker</button>
                </section>
 
-          <p class="retour">Bonne réponse ! / Mauvaise réponse !</p>
+          <p class="retour" id="retour">Bonne réponse ! / Mauvaise réponse !</p>
           </article>
      </main>
 
      <footer>
-          <button type="button" class="bouton">Suivante</button>
+          <button type="button" id="btn-suivant" class="bouton">Suivante</button>
      </footer>
      
 
@@ -99,7 +99,6 @@
 
   </section>
 
-  <script src="script.js" defer></script>
 </body>
 
 </html>
