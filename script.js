@@ -17,6 +17,10 @@ const compteur = document.getElementById("compteur")
 const texteQuestion = document.getElementById("texte-question")
 const btnSuivant = document.getElementById("btn-suivant")
 const listeReponses = document.getElementById("liste-reponses")
+const retour = document.getElementById("retour")
+const scoreFinal = document.getElementById("score-final")
+const messageFin = document.getElementById("message-fin")
+const btnRejouer = document.getElementById("btn-rejouer")
 
 //... Crée autant de constantes que d'éléments HTML à récupérer
 
@@ -65,6 +69,7 @@ const afficherQuestion = () => {
   compteur.textContent = `Question ${indexCourant + 1} / ${questions.length}`
   texteQuestion.textContent = q.question
   btnSuivant.classList.add("cache")
+  retour.classList.add("cache")
   listeReponses.innerHTML = ""
   q.reponses.forEach((reponse, index) => {
     const btn = document.createElement("button")
@@ -93,7 +98,28 @@ const afficherQuestion = () => {
 const verifierReponse = (indexChoisi) => {
   // Écris ton code ici
   const q  = questions[indexCourant]
-  
+  const boutons = listeReponses.querySelectorAll("button")
+  boutons.forEach((btn, index) => {
+    btn.disabled = true
+    if (index === q.bonne_reponse) {
+      btn.classList.add("correcte")
+    } 
+    else if (index === indexChoisi) {
+      btn.classList.add("incorrecte")
+    }
+  })
+  retour.classList.remove("correcte", "incorrecte")
+  if (indexChoisi === q.bonne_reponse) {
+    score++
+    retour.textContent = "Bonne réponse !"
+    retour.classList.add("correcte")
+  }
+  else {
+    retour.textContent = "Mauvaise réponse ! La bonne réponse était : " + q.reponses[q.bonne_reponse]
+    retour.classList.add("incorrecte")
+  }
+  retour.classList.remove("cache")
+  btnSuivant.classList.remove("cache")
 }
 
 
