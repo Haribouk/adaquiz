@@ -180,8 +180,12 @@ footer {
   cursor: pointer;
 }
 
-.reponse:hover {
+.reponse:hover:not(:disabled) {
   background-color: var(--jaune);
+}
+
+.reponse:disabled {
+  cursor: default;
 }
 
 .retour {
@@ -191,31 +195,37 @@ footer {
   color: var(--noir);
 }
 
-.retour.juste {
+.correcte {
   background-color: var(--vert);
+  color: white;
 }
 
-.retour.faux {
+.incorrecte {
   background-color: var(--rouge);
-}
-.page3 p{
-  display: flex ;
-  justify-content: center;
-  align-items: center;
+  color: white;
 }
 
-.page3 p{
-  font-size: 36px;
-  font-weight: 700;
-  border: 3px solid black;
-  display: inline-block;
-  
-}
 .page3 {
   text-align: center;
   margin-top: 50px;
 }
 
+.page3 p {
+  font-size: 36px;
+  font-weight: 700;
+  border: 3px solid black;
+  display: inline-block;
+  padding: 8px 24px;
+}
+
+.message-final {
+  margin-top: 20px;
+  font-family: var(--police-titre);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--rouge);
+}
 
 
 @media (min-width: 768px) {
@@ -254,6 +264,6 @@ footer {
   }
 }
 
-.ecran.cache {
+.cache {
   display: none;
 }
