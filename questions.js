@@ -31,20 +31,20 @@ const questions = [
   },
   {
     id: 6,
-    question: "Qui à déjà réussi à calmer Hulk ?",
+    question: "Qui a déjà réussi à calmer Hulk ?",
     reponses: ["Natasha Romanoff", "Anne Roumanoff", "Pepper Potts", "Wanda Maximoff"],
     bonne_reponse: 0
   },
   {
     id: 7,
     question: "Comment Steve Rogers est-il devenu Captain America ?",
-    reponses: ["En prenant un coup sur la tête", "Après une tentative de suicide", "Avec un sérum de Super-Soldat", "Avec un sérum physiologique"],
+    reponses: ["En prenant un coup sur la tête", "Lors d'un pacte avec un sorcier", "Grâce au sérum de Super-Soldat", "Avec un sérum physiologique"],
     bonne_reponse: 2
   },
   {
     id: 8,
     question: "Où se trouve la source du vibranium ?",
-    reponses: ["Au Wakanda", "À New-York", "Wagadougou", "Walibi"],
+    reponses: ["Au Wakanda", "À New-York", "En Sokovie", "Au Walibi"],
     bonne_reponse: 0
   },
   {
@@ -55,7 +55,7 @@ const questions = [
   },
   {
     id: 10,
-    question: "Quel technologie utilise Ant-Man pour changer de taille ?",
+    question: "Quelle technologie utilise Ant-Man pour changer de taille ?",
     reponses: ["Les particules Scott", "Les particules Pym", "Les rayons Gamma", "Le vibranium"],
     bonne_reponse: 1
   }
