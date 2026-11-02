@@ -202,21 +202,35 @@ footer {
   margin-top: 50px;
 }
 
+
+
 .page3 p {
-  font-size: 36px;
-  font-weight: 700;
-  border: 3px solid black;
   display: inline-block;
-  padding: 8px 24px;
+  padding: 8px 28px 4px;
+  background-color: var(--jaune);
+  color: var(--noir);
+  border: 4px solid var(--noir);
+  box-shadow: 6px 6px 0 var(--rouge);
+  font-family: var(--police-titre);
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  transform: rotate(-3deg);
 }
 
 .message-final {
-  margin-top: 20px;
+  margin-top: 60px;
   font-family: var(--police-titre);
   font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   color: var(--rouge);
+}
+
+:focus-visible {
+  outline: 4px solid var(--noir);
+  outline-offset: 4px;
 }
 
 
