@@ -1,29 +1,49 @@
-# AdaQuiz — Projet de départ
+# Quiz Marvel
 
-Bienvenue sur le projet de départ AdaQuiz ! Ce repo contient la structure de base du quiz. À vous de le compléter.
+**Thème :** l'univers Marvel (héros, méchants et films)
 
-## Ce qui est déjà fait
+**Projet :** AdaQuiz
 
-- `index.html` — la structure de base avec les 3 sections à compléter
-- `style.css` — uniquement la classe .cache (permettant de cacher des écrans dynamiquement grâce au JS)
-- `script.js` — le chargement du JSON et la navigation entre écrans
+**Membres du binôme :**
+- Boukhari MFOIHAYA
+- Edwin AMBROISINE
 
-## Ce que vous devez faire
+## Lancer le quiz
 
-1. **Compléter `index.html` et `style.css`** pour créer le squelette du site, sans JavaScript
-2. **Compléter `questions.json`** avec au moins 5 questions (voir le brief pour le format)
-3. **Compléter les fonctions** marquées `TODO` dans `script.js` :
-   - `afficherQuestion()`
-   - `verifierReponse(indexChoisi)`
-   - `afficherResultats()`
-   - Les écouteurs d'événements en bas du fichier
+1. Récupère le dépôt :
+   ```
+   git clone https://github.com/[utilisateur]/[nom-du-depot].git
+   ```
+2. Va dans le dossier :
+   ```
+   cd [nom-du-depot]
+   ```
+3. Ouvre le fichier `index.html` 
 
-## Lancer le projet en local
+4. Clique sur **Commencer** et joue.
 
-```bash
-npx live-server
+## Ajouter une question
+
+Seul le fichier `questions.js` est à modifier, pas `script.js`.
+
+Ajoute un objet à la fin du tableau `questions` :
+
+```js
+{
+  question: "Quel est le vrai nom de Hulk ?",
+  reponses: ["Peter Parker", "Tony Stark", "Bruce Banner", "Steve Rogers"],
+  bonne_reponse: 2
+}
 ```
 
-Ouvrir ensuite `http://localhost:8080`.
+- `question` : l'énoncé.
+- `reponses` : la liste des réponses possibles.
+- `bonne_reponse` : l'**indice** de la bonne réponse dans la liste, en commençant à **0**.
 
-> ⚠️ Ne pas ouvrir `index.html` directement dans le navigateur — `fetch` ne fonctionne pas sans serveur local.
+## Ce que nous ferions avec une semaine de plus
+
+- Mélanger l'ordre des questions et des réponses à chaque partie.
+- Afficher une courte explication après chaque réponse.
+- Récapituler à la fin les questions ratées avec leur bonne réponse.
+- Ajouter un minuteur par question.
+- Proposer plusieurs niveaux de difficulté ou plusieurs catégories (films, héros, méchants).
