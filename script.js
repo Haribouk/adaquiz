@@ -147,7 +147,7 @@ const afficherResultats = () => {
   else if (pourcentage >= 50) {
     messageFin.textContent = "Pas mal ! Tu as le niveau d'être un Avenger mais pas encore sur l'affiche du film."
   } 
-  else if (pourcentage >= 40) {
+  else if (pourcentage >= 30) {
     messageFin.textContent = "Va falloir patienter avant l'appel de Nick Fury. Révise encore et on en reparle."
   }
   else {
